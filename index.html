@@ -1,0 +1,141 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary meta tags -->
+    <meta name="title" content="Mega Weather Application">
+    <meta name="description" content="Mega Weather Application is a weather app made by Muhammad Talha Naeem Ansari">
+    <title>Mega Weather Application | Talha Ansari</title>
+
+    <!-- ============================================
+    favicon
+     ============================================ -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- ============================================
+    Google font link
+     ============================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- ============================================
+    custom css link
+     ============================================ -->
+
+     <link rel="stylesheet" href="./assets/css/style.css">
+
+     <!-- ============================================
+    custom js link
+     ============================================ -->
+
+     <script defer src="./assets/js/app.js" type="module"></script>
+     <script defer src="./assets/js/route.js" type="module"></script> 
+</head>
+<h1>
+    
+</h1>
+
+            
+    <!-- 
+    #HEADER
+      -->
+
+      <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.png" alt="logo" width="364" height="58">
+            </a>
+            <div class="search_view" data-search-view>
+                <div class="search_wrapper">
+                    <input type="search" name="search" class="search_field" placeholder="Search City..." autocomplete="off" data-search-field>
+
+                    <span class="m-icon leading_icon">Search</span>
+
+                    <button class="icon_btn leading_icon has_state" aria-label="close search" data-search-toggler>
+                        <span class="m-icon">arrow_back</span>
+                    </button>
+                </div>
+
+                <div class="search_result" data-search-result></div>
+            </div>
+            <div class="header_action">
+                <button class="icon_btn has_state" aria-label="open search" data-search-toggler>
+                    <span class="m-icon icon">search</span>
+                </button>
+                <a href="#/current_location" class="btn_primary has_state" data-current-location-btn>
+                    <span class="m-icon">my_location</span>
+
+                    <span class="span">Current Location</span>
+                </a>
+            </div>
+        </div>
+      </header>
+
+      <!-- 
+      #MAIN
+     -->
+      <main>
+        <article class="container" data-container>
+            <div class="content_left">
+                <!-- 
+                #CURRENT Weather
+                  -->
+                <section class="section current_weather" aria-label="current weather" data-current-weather></section>
+
+                <!-- 
+                #FORECAST 
+                 -->
+
+                 <section class="section forecast" aria-labelledby="forecast-label" data-5-day-forecast></section>
+            </div>
+
+            <div class="content_right">
+                <!-- 
+                #HIGHLIGHT
+                  -->
+                <section class="section highlights" aria-labelledby="highlights-label" data-highlights></section>
+
+                <!-- 
+                #HOURLY FORECAST
+                -->
+
+                <section class="section hourly_forecast" aria-label="hourly forecast" data-hourly-forecast></section>
+
+                <!-- 
+            #FOOTER
+              -->
+
+              <footer class="footer">
+                <p class="body_3">
+                    Copyright &COPY; 2024 Muhammad Talha Naeem Ansari. All Right Reserved.
+                </p>
+                <p class="body_3">
+                    Powered by <a href="https://openweathermap.org/api" title="Free OpenWeather Api" target="_blank" rel="noopener">
+                        <img src="./assets/images/openweather.png" width="150" height="30" loading="lazy" alt="OpenWeather">
+                    </a>
+                </p>
+              </footer>
+            </div>
+
+            <div class="loading" data-loading></div>
+
+
+        </article>
+      </main>
+
+    <!-- 
+      #404 SECTION
+    -->
+      <section class="error_content" data-error-content>
+        <h2 class="heading">404</h2>
+        <p class="body_1">Page Not Found</p>
+        <a href="#/weather?lat=24.8546842&lon=67.0207055" class="btn_primary">
+            <span class="span">Go Home</span>
+        </a>
+      </section>
+
+</body>
+
+</html>
