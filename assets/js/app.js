@@ -139,7 +139,7 @@ export const updateWeather = function (lat, lon){
        <h2 class="title_2 card_title">Now</h2>
 
           <div class="weapper">
-              <p class="heading">${parseInt(temp)}&deg;<sup>c</sup></p>
+              <p class="heading">${parseInt(temp)|| 0 }&deg;<sup>c</sup></p>
               <img src="./assets/images/weather_icons/${icon}.png" alt="${description}" width="64" height="64" class="weather-icon">
           </div>
 

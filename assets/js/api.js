@@ -19,9 +19,17 @@ const apiKey = 'da822007c8f0559256c6696a00bace61';
 */
 
 export const fetchData = function (URL, callback){
-    fetch(`${URL}&appid=${apiKey}`)
-    .then(res => res.json())
-    .then(data => callback(data));
+    try {
+        
+        fetch(`${URL}&appid=${apiKey}`)
+        .then(res => res.json())
+        .then(data => callback(data)).catch(e=>{
+            console.log(e);
+        })
+    } catch (error) {
+        console.log("🚀 ~ fetchData ~ error:", error)
+        
+    }
 }
 
 export const url = {
